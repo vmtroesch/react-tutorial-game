@@ -1,6 +1,10 @@
+## react-tutorial-game
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Install [Yarn](https://yarnpkg.com).
+
+This is an implementation of the [official React JS tutorial](https://reactjs.org/tutorial/tutorial.html) with all suggested additional features.
 
 ## Available Scripts
 
