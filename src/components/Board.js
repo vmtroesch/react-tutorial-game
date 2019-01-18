@@ -21,21 +21,21 @@ class Board extends React.Component {
   }
 
   createBoard(col, row) {
-    let board = [];
+    let result = [];
     let count = 0;
 
     for (let i = 0; i < row; i++) {
-      let column = [];
+      let rows = [];
       for (let j = 0; j < col; j++) {
-        column.push(this.renderSquare(count++));
+        rows.push(this.renderSquare(count++));
       }
-      board.push(
+      result.push(
         <div key={i} className="board-row">
-          {column}
+          {rows}
         </div>
       );
     }
-    return board;
+    return result;
   }
 
   render() {
