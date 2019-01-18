@@ -3,7 +3,7 @@ import Square from "./Square";
 
 class Board extends React.Component {
   renderSquare(i) {
-    let className =
+    const className =
       this.props.winningLine &&
       (this.props.winningLine[0] === i ||
         this.props.winningLine[1] === i ||
