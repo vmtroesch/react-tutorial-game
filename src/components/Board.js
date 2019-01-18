@@ -21,7 +21,7 @@ class Board extends React.Component {
   }
 
   createBoard(col, row) {
-    let result = [];
+    let board = [];
     let count = 0;
 
     for (let i = 0; i < row; i++) {
@@ -29,13 +29,13 @@ class Board extends React.Component {
       for (let j = 0; j < col; j++) {
         rows.push(this.renderSquare(count++));
       }
-      result.push(
+      board.push(
         <div key={i} className="board-row">
           {rows}
         </div>
       );
     }
-    return result;
+    return board;
   }
 
   render() {
