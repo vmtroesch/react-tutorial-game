@@ -1,6 +1,6 @@
 import React from "react";
 
-function Square(props) {
+const Square = props => {
   return (
     <button className={props.className} onClick={props.onClick}>
       {props.value}
