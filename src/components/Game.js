@@ -99,8 +99,8 @@ class Game extends React.Component {
   }
 }
 
-function getLocation(move) {
-  const locationMap = {
+const getLocation = move => {
+  const location = {
     0: "(col 1, row 1)",
     1: "(col 2, row 1)",
     2: "(col 3, row 1)",
@@ -111,10 +111,10 @@ function getLocation(move) {
     7: "(col 2, row 3)",
     8: "(col 3, row 3)"
   };
-  return locationMap[move];
+  return location[move];
 }
 
-function calculateWinner(squares) {
+const calculateWinner = squares => {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
