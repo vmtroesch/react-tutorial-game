@@ -17,16 +17,16 @@ class Game extends React.Component {
     };
   }
 
-  /*  constructor(props) method:
-  *
-  *  super(props) must be called before any other statement, otherwise this.props will be undefined in the constructor.
-  *  
-  *  in the constructor method, do not use setState(), instead directly assign a value this.state = {prop: value}
-  * 
-  *  do not directly assign props in to state as updates to prop will not be reflected in state causing bugs
-  * 
-  *  read more at https://reactjs.org/docs/react-component.html#constructor
-  */
+  /* constructor(props) method:
+   *
+   * super(props) must be called before any other statement, otherwise this.props will be undefined in the constructor.
+   *
+   * In the constructor method, do not use setState(), instead directly assign a value using this.state = {prop: value}
+   *
+   * Do not directly assign props in to state as updates to prop will not be reflected in state causing bugs.
+   *
+   * Read more at https://reactjs.org/docs/react-component.html#constructor
+   */
 
   handleClick(i) {
     let history = this.state.history.slice(0, this.state.stepNumber + 1);
@@ -48,15 +48,14 @@ class Game extends React.Component {
     });
   }
 
-  /*  handleClick(i) method:
-  * 
-  *  we use the history preserving slice() method rather than concat() so as to be able to list a move history
-  *  and go back to previous Game states.
-  * 
-  *  the if statement is to handle clicks that should not alter the Game component's state.  Note the use of setState()
-  *  in this method rather than this.state = {prop: value} which should only be called in the constructor method.
-  *
-  */
+  /* handleClick(i) method:
+   *
+   * We use the history preserving slice() method rather than concat() so as to be able to list a move history
+   * and go back to previous Game states.
+   *
+   * The if statement is to handle clicks that should not alter the Game component's state.  Note the use of setState()
+   * in this method rather than this.state = {prop: value} which should only be called in the constructor method.
+   */
 
   jumpTo(step) {
     this.setState({
@@ -72,12 +71,11 @@ class Game extends React.Component {
   }
 
   /* jumpTo(step) and sortMoves() methods
-  *
-  * jumpTo(step) uses setState() to move the state through the preserved Game history.
-  * 
-  * sortMoves() allows the display of move history to be in either ascending or descending order by user preference.
-  * 
-  */
+   *
+   * jumpTo(step) uses setState() to move the state through the preserved Game history.
+   *
+   * sortMoves() allows the display of move history to be in either ascending or descending order by user preference.
+   */
 
   render() {
     const history = this.state.history;
@@ -128,13 +126,12 @@ class Game extends React.Component {
   }
 
   /* render() method:
-  * 
-  *  Updates the Game logic, checking for a winner and updating the Game's status to display the next player
-  *  or the game's result, either win or draw.
-  * 
-  *  Once game logic is updated, the Game's state is passed down as props to its child component, Board.
-  * 
-  */
+   *
+   * Updates the Game logic, checking for a winner and updating the Game's status to display the next player
+   * or the game's result, either win or draw.
+   *
+   * Once game logic is updated, the Game's state is passed down as props to its child component, Board.
+   */
 }
 
 const getLocation = move => {
@@ -150,14 +147,13 @@ const getLocation = move => {
     8: "(col 3, row 3)"
   };
   return location[move];
-}
+};
 
 /* getLocation(move) function:
-*  
-*  A function that has been factored out which maps indexes in the Board (0, ...8) to (col, row) locations in order
-* to be displayed in the move history list.
-*
-*/
+ *
+ * A function that has been factored out which maps indexes in the Board (0, ...8) to (col, row) locations in order
+ * to be displayed in the move history list.
+ */
 
 const calculateWinner = squares => {
   const lines = [
@@ -177,14 +173,15 @@ const calculateWinner = squares => {
     }
   }
   return { winner: null, winningLine: null };
-}
+};
 
 /* calculateWinner(squares) function:
-*  
-*  A function that has been factored out which is part of the logic in determining if a player has
-* won the game or not.  It also returns an array of the Board indices that won the game, so they can have
-* a special styling applied.
-*
-*/
+ *
+ * A function that has been factored out which is part of the logic in determining if a player has
+ * won the game or not.
+ *
+ * It also returns an array of the Board indices that won the game, so they can have
+ * a special styling applied.
+ */
 
 export default Game;
