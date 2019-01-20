@@ -2,6 +2,15 @@ import React from "react";
 import Square from "./Square";
 
 class Board extends React.Component {
+
+  /**
+   * @description
+   * Renders a React component.
+   * 
+   * @param {Object} i
+   * @return {Object}
+   */
+
   renderSquare(i) {
     const className =
       this.props.winningLine &&
@@ -20,6 +29,14 @@ class Board extends React.Component {
     );
   }
 
+  /**
+   * @description
+   * Creates the board programmatically.
+   * 
+   * @param {Object} col @param {Object} row
+   * @return {Object}
+   */
+
   createBoard(col, row) {
     let board = [];
     let count = 0;
@@ -37,6 +54,15 @@ class Board extends React.Component {
     }
     return board;
   }
+
+  /**
+   * @description
+   * Renders the React component.
+   * 
+   * Read more at https://reactjs.org/docs/react-component.html#render
+   * 
+   * @return {Object}
+   */
 
   render() {
     const numCols = 3;
