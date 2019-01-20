@@ -7,8 +7,8 @@ class Board extends React.Component {
    * @description
    * Renders a React component.
    * 
-   * @param {Object} i
-   * @return {Object}
+   * @param {Object} i The index of the square.
+   * @return {Object} Returns an HTML element.
    */
 
   renderSquare(i) {
@@ -33,8 +33,9 @@ class Board extends React.Component {
    * @description
    * Creates the board programmatically.
    * 
-   * @param {Object} col @param {Object} row
-   * @return {Object}
+   * @param {Object} col The number of columns on the board.
+   * @param {Object} row The number of rows on the board.
+   * @return {Object} An array of rendered squares that comprise the board.
    */
 
   createBoard(col, row) {
@@ -61,7 +62,7 @@ class Board extends React.Component {
    * 
    * Read more at https://reactjs.org/docs/react-component.html#render
    * 
-   * @return {Object}
+   * @return {Object} Returns an HTML element.
    */
 
   render() {

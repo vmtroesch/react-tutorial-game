@@ -9,7 +9,7 @@ class Game extends React.Component {
    * 
    * Read more at https://reactjs.org/docs/react-component.html#constructor
    * 
-   * @param {Object} props
+   * @param {Object} props Defines this.props in the constructor.
    */
 
   constructor(props) {
@@ -32,7 +32,7 @@ class Game extends React.Component {
    * @description
    * Handles game logic when the user clicks on a square.
    * 
-   * @param {*} i
+   * @param {Object} i The index of the clicked square.
    */
 
   handleClick(i) {
@@ -59,7 +59,7 @@ class Game extends React.Component {
    * @description
    * Jump to a previous state in the game history.
    * 
-   * @param {*} step 
+   * @param {Object} step The stepNumber of the state we are going to.
    */
 
   jumpTo(step) {
@@ -86,7 +86,7 @@ class Game extends React.Component {
    * 
    * Read more at https://reactjs.org/docs/react-component.html#render
    * 
-   * @return {Object}
+   * @return {Object} Returns an HTML element.
    */
 
   render() {
@@ -140,13 +140,13 @@ class Game extends React.Component {
 
 /**
  * @description
- * Gets a location in the format (col, row) for a move index.
+ * Gets a location in the format (col, row) for a given move.
  * 
- * @param {Object} move
- * @return {Object}
+ * @param {Object} i The move's index on the board.
+ * @return {Object} A string description of the move location.
  */
 
-const getLocation = move => {
+const getLocation = i => {
   const location = {
     0: "(col 1, row 1)",
     1: "(col 2, row 1)",
@@ -158,15 +158,15 @@ const getLocation = move => {
     7: "(col 2, row 3)",
     8: "(col 3, row 3)"
   };
-  return location[move];
+  return location[i];
 };
 
 /**
  * @description
  * Handles the logic of declaring a winner and marking the squares that won.
  * 
- * @param {Object} squares 
- * @return {Object} 
+ * @param {Object} squares The current board state.
+ * @return {Object} Returns an object describing who won and which squares won.
  */
 
 const calculateWinner = squares => {
