@@ -1,12 +1,12 @@
 import React from "react";
 
- /**
-   * @description
-   * Renders a React component.
-   * 
-   * @param {Object} props Properties are passed from parent components to children.
-   * @return {Object} Returns an HTML element.
-   */
+/**
+ * @description
+ * Renders the React component.
+ *
+ * @param {Object} props Properties are passed from parent components to children.
+ * @return {Object} Returns a React component.
+ */
 
 const Square = props => {
   return (
@@ -14,6 +14,6 @@ const Square = props => {
       {props.value}
     </button>
   );
-}
+};
 
 export default Square;

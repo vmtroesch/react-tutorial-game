@@ -2,13 +2,12 @@ import React from "react";
 import Square from "./Square";
 
 class Board extends React.Component {
-
   /**
    * @description
-   * Renders a React component.
-   * 
-   * @param {Object} i The index of the square.
-   * @return {Object} Returns an HTML element.
+   * Renders a Square.
+   *
+   * @param {Object} i The index of the Square.
+   * @return {Object} Returns a React element.
    */
 
   renderSquare(i) {
@@ -32,7 +31,7 @@ class Board extends React.Component {
   /**
    * @description
    * Creates the board programmatically.
-   * 
+   *
    * @param {Object} col The number of columns on the board.
    * @param {Object} row The number of rows on the board.
    * @return {Object} An array of rendered squares that comprise the board.
@@ -59,10 +58,10 @@ class Board extends React.Component {
   /**
    * @description
    * Renders the React component.
-   * 
+   *
    * Read more at https://reactjs.org/docs/react-component.html#render
-   * 
-   * @return {Object} Returns an HTML element.
+   *
+   * @return {Object} Returns a React element.
    */
 
   render() {
