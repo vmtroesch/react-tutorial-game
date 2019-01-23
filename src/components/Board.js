@@ -1,6 +1,11 @@
 import React from "react";
 import Square from "./Square";
 
+/**
+ * @description
+ * React component for displaying a tic-tac-toe board.
+ */
+
 class Board extends React.Component {
   /**
    * @description
@@ -16,7 +21,7 @@ class Board extends React.Component {
       (this.props.winningLine[0] === i ||
         this.props.winningLine[1] === i ||
         this.props.winningLine[2] === i)
-        ? "winnersquare"
+        ? "winning square"
         : "square";
 
     return (

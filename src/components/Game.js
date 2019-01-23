@@ -1,6 +1,11 @@
 import React from "react";
 import Board from "./Board";
 
+/**
+ * @description
+ * Component that maintains state and game logic for our React app.
+ */
+
 class Game extends React.Component {
   /**
    * @description
