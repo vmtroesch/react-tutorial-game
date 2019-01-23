@@ -7,6 +7,7 @@ import Board from "./Board";
  */
 
 class Game extends React.Component {
+  
   /**
    * @description
    * React component constructor.
