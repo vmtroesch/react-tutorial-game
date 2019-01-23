@@ -103,7 +103,7 @@ class Game extends React.Component {
 
     let moves = history.map((step, move) => {
       const desc = move
-        ? "Go to move #" + move + " at " + history[move].location
+        ? `Go to move #${move} at ${history[move].location}`
         : "Go to game start";
       const className = move === this.state.stepNumber ? "bold" : "";
       return (
@@ -152,7 +152,7 @@ const getLocation = i => {
     3: "(col 1, row 2)",
     4: "(col 2, row 2)",
     5: "(col 3, row 2)",
-    6: "(row 1, row 3)",
+    6: "(col 1, row 3)",
     7: "(col 2, row 3)",
     8: "(col 3, row 3)"
   };
