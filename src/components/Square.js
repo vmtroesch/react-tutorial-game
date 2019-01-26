@@ -1,7 +1,6 @@
 import React from "react";
 
 /**
- * @description
  * Renders the React component.
  *
  * @param {Object} props Properties are passed from parent components to children.

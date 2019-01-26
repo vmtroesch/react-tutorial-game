@@ -2,14 +2,12 @@ import React from "react";
 import Board from "./Board";
 
 /**
- * @description
- * Component that maintains state and game logic for our React app.
+ * Top level component that maintains state and game logic for our React app.
  */
 
 class Game extends React.Component {
   
   /**
-   * @description
    * React component constructor.
    *
    * Read more at https://reactjs.org/docs/react-component.html#constructor
@@ -33,7 +31,6 @@ class Game extends React.Component {
   }
 
   /**
-   * @description
    * Handles game logic when the user clicks on a square.
    *
    * @param {Object} i The index of the clicked square.
@@ -60,7 +57,6 @@ class Game extends React.Component {
   }
 
   /**
-   * @description
    * Jump to a previous state in the game history.
    *
    * @param {Object} step The stepNumber of the state we are going to.
@@ -74,7 +70,6 @@ class Game extends React.Component {
   }
 
   /**
-   * @description
    * Sort move history in ascending or descending order in the display.
    */
 
@@ -85,7 +80,6 @@ class Game extends React.Component {
   }
 
   /**
-   * @description
    * Renders the React component.
    *
    * Read more at https://reactjs.org/docs/react-component.html#render
@@ -143,7 +137,6 @@ class Game extends React.Component {
 }
 
 /**
- * @description
  * Gets a location in the format (col, row) for a given move.
  *
  * @param {Object} i The move's index on the board.
@@ -166,7 +159,6 @@ const getLocation = i => {
 };
 
 /**
- * @description
  * Handles the logic of declaring a winner and marking the squares that won.
  *
  * @param {Object} squares The current board state.

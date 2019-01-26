@@ -2,13 +2,11 @@ import React from "react";
 import Square from "./Square";
 
 /**
- * @description
  * React component for displaying a tic-tac-toe board.
  */
 
 class Board extends React.Component {
   /**
-   * @description
    * Renders a Square.
    *
    * @param {Object} i The index of the Square.
@@ -35,7 +33,6 @@ class Board extends React.Component {
   }
 
   /**
-   * @description
    * Creates the board programmatically.
    *
    * @param {Object} col The number of columns on the board.
@@ -62,7 +59,6 @@ class Board extends React.Component {
   }
 
   /**
-   * @description
    * Renders the React component.
    *
    * Read more at https://reactjs.org/docs/react-component.html#render
