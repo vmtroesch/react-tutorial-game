@@ -6,7 +6,6 @@ import Board from "./Board";
  */
 
 class Game extends React.Component {
-  
   /**
    * React component constructor.
    *
@@ -37,7 +36,7 @@ class Game extends React.Component {
    */
 
   handleClick(i) {
-    let history = this.state.history.slice(0, this.state.stepNumber + 1);
+    const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
     if (calculateWinner(squares).winner || squares[i]) {
@@ -143,7 +142,7 @@ class Game extends React.Component {
  * @return {Object} A string description of the move location.
  */
 
-const getLocation = i => {
+function getLocation(i) {
   const location = {
     0: "(col 1, row 1)",
     1: "(col 2, row 1)",
@@ -156,7 +155,7 @@ const getLocation = i => {
     8: "(col 3, row 3)"
   };
   return location[i];
-};
+}
 
 /**
  * Handles the logic of declaring a winner and marking the squares that won.
@@ -165,7 +164,7 @@ const getLocation = i => {
  * @return {Object} Returns an object describing who won and which squares won.
  */
 
-const calculateWinner = squares => {
+function calculateWinner(squares) {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -183,6 +182,6 @@ const calculateWinner = squares => {
     }
   }
   return { winner: null, winningLine: null };
-};
+}
 
 export default Game;

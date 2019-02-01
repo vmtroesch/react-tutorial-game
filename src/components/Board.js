@@ -1,5 +1,4 @@
 import React from "react";
-import Square from "./Square";
 
 /**
  * React component for displaying a tic-tac-toe board.
@@ -73,5 +72,20 @@ class Board extends React.Component {
     return <div>{this.createBoard(numCols, numRows)}</div>;
   }
 }
+
+/**
+ * React function component for rendering a square on the game board.
+ *
+ * @param {Object} props Properties are passed from parent components to children.
+ * @return {Object} Returns a React component.
+ */
+
+const Square = props => {
+  return (
+    <button className={props.className} onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
+};
 
 export default Board;
