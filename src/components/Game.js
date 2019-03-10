@@ -102,7 +102,7 @@ class Game extends React.Component {
 
     let moves = history.map((step, move) => {
       const desc = move
-        ? `Go to move #${move} at ${history[move].location}`
+        ? `Go to move #${move} at ${step.location}`
         : "Go to game start";
       const className = move === this.state.stepNumber ? "bold" : "";
       return (
