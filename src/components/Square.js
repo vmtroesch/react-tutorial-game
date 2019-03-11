@@ -14,3 +14,5 @@ const Square = props => {
     </button>
   );
 };
+
+export default Square;
