@@ -11,7 +11,7 @@ class Game extends React.Component {
    *
    * Read more at https://reactjs.org/docs/react-component.html#constructor
    *
-   * @param {Object} props Defines this.props in the constructor.
+   * @param {object} props Defines this.props in the constructor.
    */
 
   constructor(props) {
@@ -32,7 +32,7 @@ class Game extends React.Component {
   /**
    * Handles game logic when the user clicks on a square.
    *
-   * @param {Object} i The index of the clicked square.
+   * @param {number} i The index of the clicked square.
    */
 
   handleClick(i) {
@@ -58,7 +58,7 @@ class Game extends React.Component {
   /**
    * Jump to a previous state in the game history.
    *
-   * @param {Object} step The stepNumber of the state we are going to.
+   * @param {number} step The stepNumber of the state we are going to.
    */
 
   jumpTo(step) {
@@ -83,7 +83,7 @@ class Game extends React.Component {
    *
    * Read more at https://reactjs.org/docs/react-component.html#render
    *
-   * @return {Object} Returns a React element.
+   * @return {object} Returns a React element.
    */
 
   render() {
@@ -138,8 +138,8 @@ class Game extends React.Component {
 /**
  * Gets a location in the format (col, row) for a given move.
  *
- * @param {Object} i The move's index on the board.
- * @return {Object} A string description of the move location.
+ * @param {number} i The move's index on the board.
+ * @return {string} A string description of the move location.
  */
 
 function getLocation(i) {
@@ -160,8 +160,8 @@ function getLocation(i) {
 /**
  * Handles the logic of declaring a winner and marking the squares that won.
  *
- * @param {Object} squares The current board state.
- * @return {Object} Returns an object describing who won and which squares won.
+ * @param {object} squares The current board state.
+ * @return {object} Returns an object describing who won and which squares won.
  */
 
 function calculateWinner(squares) {
