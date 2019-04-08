@@ -67,10 +67,10 @@ class Board extends React.Component {
    */
 
   render() {
-    const numCols = 3;
-    const numRows = 3;
+    const col = 3;
+    const row = 3;
 
-    return <div>{this.createBoard(numCols, numRows)}</div>;
+    return <div>{this.createBoard(col, row)}</div>;
   }
 }
 
